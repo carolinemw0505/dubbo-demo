@@ -36,7 +36,7 @@
     <!--配置扫描Dao接口包，动态实现Dao接口，注入到spring容器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-        <property name="basePackage" value="com.spring.dubbo.dao"></property>
+        <property name="basePackage" value="com.spring.dubbo.dao,org.egoo.dubbo.dao"></property>
     </bean>
 
     <!--配置事务管理器-->

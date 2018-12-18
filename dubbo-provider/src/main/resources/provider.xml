@@ -17,9 +17,15 @@
     <dubbo:provider timeout="10000" threadpool="fixed" threads="100" accepts="1000" />
 
     <!-- 暴露服务接口 一个服务可以用多个协议暴露，一个服务也可以注册到多个注册中心-->
-    <dubbo:service id ="userService" interface="com.spring.dubbo.service.faceSystemApi" ref="userServiceImpl" />
+    <dubbo:service id ="userService" interface="com.spring.dubbo.service.faceSystemApi" ref="uServiceImpl" />
+
+    <!--dubbo注解扫描-->
+    <dubbo:annotation package="org.egoo.dubbo"></dubbo:annotation>
 
     <!--具体实现该接口的 bean-->
-    <bean id="userServiceImpl" class="com.spring.dubbo.service.impl.faceSystemApiImpl"/>
+    <bean id="uServiceImpl" class="com.spring.dubbo.service.impl.faceSystemApiImpl"/>
+
+    <!--已在实现类org.egoo.dubbo.service.impl.UserServiceImpl配置dubbo的service注解-->
+    <!--<dubbo:service interface="org.egoo.dubbo.core.UserService" id="userDubboService" ref="userService"></dubbo:service>-->
 
 </beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--为UserDao提供sql-->
+<mapper namespace="org.egoo.dubbo.dao.UserDao">
+    <select id="queryAll" resultType="HashMap" parameterType="HashMap">
+        select
+        id,email,password,username,role,status,regTime,regIp
+        from user
+        order by id
+        limit #{offset},#{limit};
+    </select>
+    
+</mapper>
