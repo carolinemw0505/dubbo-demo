@@ -24,6 +24,11 @@
             <artifactId>jetty-jsp</artifactId>
         </dependency>
 
+        <!--redis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
         <!--junit测试-->
         <dependency>
             <groupId>junit</groupId>
